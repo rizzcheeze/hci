@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Sign In</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-auth" data-page="auth">
+
+<div class="left-panel">
+  <div class="lp-logo">Hire <span>GCians!</span></div>
+  <div class="lp-hero">
+      <div class="lp-label">Platform access</div>
+    <div class="lp-heading">Find roles that <em>actually</em> fit you.</div>
+      <div class="lp-sub">Access the student, employer, and admin workflows from one shared platform experience.</div>
+    <div class="lp-cards" id="auth-match-cards"></div>
+  </div>
+      <div class="lp-footer">Student, employer, and admin access</div>
+</div>
+
+<div class="right-panel">
+  <div class="auth-box">
+    <div class="auth-tabs">
+      <div class="auth-tab active" onclick="showTab('login',this)">Log in</div>
+      <div class="auth-tab" onclick="showTab('signup',this)">Sign up</div>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="login-panel">
+      <div class="auth-heading">Welcome back</div>
+        <div class="auth-sub">Sign in to access the student, employer, or admin workspace.</div>
+
+      <div class="role-selector">
+        <div class="role-card selected" onclick="selectRole(this)">
+          <div class="role-icon">🎓</div>
+          <div class="role-title">Student</div>
+          <div class="role-sub">Browse & apply</div>
+        </div>
+        <div class="role-card" onclick="selectRole(this)">
+          <div class="role-icon">🏢</div>
+          <div class="role-title">Employer</div>
+          <div class="role-sub">Post & hire</div>
+        </div>
+      </div>
+
+      <label class="form-label">Email</label>
+      <input class="form-input" id="login-email" type="email" placeholder="yourname@example.com" />
+
+      <label class="form-label">Password</label>
+      <input class="form-input" id="login-password" type="password" placeholder="••••••••" />
+      <div class="forgot">Forgot password?</div>
+
+      <button class="btn-full" id="login-submit">Sign in</button>
+      <div class="divider-text">or continue with</div>
+      <button class="google-btn">
+        <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.5 1.2 8.9 3.2l6.6-6.6C35.4 2.5 30.1 0 24 0 14.6 0 6.6 5.5 2.7 13.5l7.7 6C12.2 13.4 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.7-.1-3.3-.4-4.8H24v9.1h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4 6.9-10 6.9-17.3z"/><path fill="#FBBC05" d="M10.4 28.5c-.5-1.5-.8-3-.8-4.5s.3-3 .8-4.5l-7.7-6C1 16.3 0 20 0 24s1 7.7 2.7 10.5l7.7-6z"/><path fill="#34A853" d="M24 48c6.1 0 11.2-2 14.9-5.4l-7.5-5.8c-2 1.4-4.6 2.2-7.4 2.2-6.4 0-11.8-4-13.6-9.5l-7.7 6C6.6 42.5 14.6 48 24 48z"/></svg>
+        Continue with Google
+      </button>
+      <div class="terms">By continuing, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</div>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="signup-panel" style="display:none">
+      <div class="auth-heading">Create account</div>
+        <div class="auth-sub">Create an account profile for the platform experience.</div>
+
+      <div class="role-selector">
+        <div class="role-card selected" id="signup-student" onclick="selectSignupRole('student')">
+          <div class="role-icon">🎓</div>
+          <div class="role-title">Student</div>
+          <div class="role-sub">Browse & apply</div>
+        </div>
+        <div class="role-card" id="signup-employer" onclick="selectSignupRole('employer')">
+          <div class="role-icon">🏢</div>
+          <div class="role-title">Employer</div>
+          <div class="role-sub">Post & hire</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label class="form-label">First name</label>
+          <input class="form-input" id="signup-first-name" placeholder="Allyana" />
+        </div>
+        <div>
+          <label class="form-label">Last name</label>
+          <input class="form-input" id="signup-last-name" placeholder="Espiridion" />
+        </div>
+      </div>
+
+      <label class="form-label">Email</label>
+      <input class="form-input" id="signup-email" type="email" placeholder="yourname@example.com" />
+
+      <div class="signup-extras visible" id="student-extras">
+        <div class="form-row">
+          <div>
+            <label class="form-label">Program</label>
+            <select class="form-select" id="signup-program">
+              <option>BSCS</option><option>BSIT</option><option>BSIS</option><option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label">Year level</label>
+            <select class="form-select" id="signup-year-level">
+              <option>1st Year</option><option selected>2nd Year</option><option>3rd Year</option><option>4th Year</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="signup-extras" id="employer-extras">
+        <label class="form-label">Company / Employer</label>
+        <select class="form-select" id="signup-company">
+          <option>BrightPath Digital Solutions</option><option>North Harbor Creatives</option><option>Summit Workforce Partners</option><option>Nova Analytics</option><option>Independent Employer</option>
+        </select>
+      </div>
+
+      <label class="form-label">Password</label>
+      <input class="form-input" id="signup-password" type="password" placeholder="At least 8 characters" />
+
+      <button class="btn-full" id="signup-submit">Create my account</button>
+      <div class="divider-text">or sign up with</div>
+      <button class="google-btn">
+        <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.5 1.2 8.9 3.2l6.6-6.6C35.4 2.5 30.1 0 24 0 14.6 0 6.6 5.5 2.7 13.5l7.7 6C12.2 13.4 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.7-.1-3.3-.4-4.8H24v9.1h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4 6.9-10 6.9-17.3z"/><path fill="#FBBC05" d="M10.4 28.5c-.5-1.5-.8-3-.8-4.5s.3-3 .8-4.5l-7.7-6C1 16.3 0 20 0 24s1 7.7 2.7 10.5l7.7-6z"/><path fill="#34A853" d="M24 48c6.1 0 11.2-2 14.9-5.4l-7.5-5.8c-2 1.4-4.6 2.2-7.4 2.2-6.4 0-11.8-4-13.6-9.5l-7.7 6C6.6 42.5 14.6 48 24 48z"/></svg>
+        Continue with Google
+      </button>
+      <div class="terms">By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</div>
+    </div>
+  </div>
+</div>
+
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+

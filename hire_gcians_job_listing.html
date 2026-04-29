@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Job Listing</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-job-listing" data-page="job-listing">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span></div>
+    <div class="s-user">
+      <div class="s-avatar">AE</div>
+      <div><div class="s-name">Allyana Espiridion</div><div class="s-prog">BSCS 2-B</div></div>
+    </div>
+    <ul class="s-nav">
+        <li onclick="location.href='/student/dashboard'">⬡ Dashboard</li>
+      <li class="active">⬡ Browse jobs</li>
+        <li onclick="location.href='/student/applications'">⬡ My applications</li>
+        <li onclick="location.href='/student/saved'">⬡ Saved</li>
+      <div class="s-nav-label">Account</div>
+        <li onclick="location.href='/student/profile'">⬡ Edit profile</li>
+        <li onclick="location.href='/student/resume'">⬡ Skills &amp; resume</li>
+        <li onclick="location.href='/student/settings'">⬡ Settings</li>
+    </ul>
+  </aside>
+  <main class="main">
+  <div class="main-header">
+    <div>
+      <div class="page-title">Browse Jobs</div>
+      <div class="page-sub">Search, filter, and review jobs matched to your profile.</div>
+    </div>
+    <div class="search-row">
+      <span style="color:#97C459;font-size:14px">&#128269;</span>
+      <input class="search-input" id="job-search-input" placeholder="Search jobs, skills, companies..." />
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="filters" id="job-filter-panel"></div>
+
+    <div class="jobs-col">
+      <div class="jobs-header">
+        <div class="jobs-count" id="jobs-count">12 opportunities found</div>
+        <select class="sort-select"><option>Sort: Best match</option></select>
+      </div>
+
+      <div id="job-listings"></div>
+    </div>
+
+    <div class="detail-panel" id="job-detail-panel"></div>
+  </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+

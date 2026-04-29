@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Applicants</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-employer-applicants" data-page="employer-applicants">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span><div class="emp-badge">Employer account</div></div>
+    <div class="s-user">
+      <div class="s-avatar">BD</div>
+      <div><div class="s-name">BrightPath Digital</div><div class="s-dept">Third-party employer</div></div>
+    </div>
+    <ul class="s-nav">
+      <li onclick="location.href='/employer/dashboard'">⬡ Dashboard</li>
+      <li onclick="location.href='/employer/posting'">⬡ Post a job</li>
+      <li class="active">⬡ Applicants <span class="badge">5</span></li>
+      <li onclick="location.href='/employer/listings'">⬡ Active listings</li>
+      <li onclick="location.href='/employer/hired'">⬡ Hired students</li>
+      <div class="s-nav-label">Account</div>
+      <li onclick="location.href='/employer/company'">⬡ Company profile</li>
+      <li onclick="location.href='/employer/settings'">⬡ Settings</li>
+    </ul>
+  </aside>
+
+  <div class="main">
+    <!-- Applicants List -->
+    <div class="list-col">
+      <div class="list-header">
+        <div class="list-title">Applicants</div>
+        <div class="list-sub" id="applicants-list-subtitle">8 applicants across your listings</div>
+        <div class="job-switcher">
+          <select class="job-switch-select" id="applicant-job-select">
+          </select>
+        </div>
+      </div>
+      <div class="stage-tabs">
+        <div class="stab active" data-stage-filter="all">All (8)</div>
+        <div class="stab" data-stage-filter="pending">New (3)</div>
+        <div class="stab" data-stage-filter="review">Review (3)</div>
+        <div class="stab" data-stage-filter="interview">Interview (1)</div>
+        <div class="stab" data-stage-filter="hired">Hired (1)</div>
+      </div>
+      <div class="list-scroll" id="applicants-list"></div>
+    </div>
+
+    <!-- Detail Panel -->
+    <div class="detail-col">
+      <div class="dc-back">← Back to listings</div>
+      <div class="dc-header">
+        <div class="dc-avatar" id="applicant-detail-avatar" style="background:var(--gc-green)">AE</div>
+        <div>
+          <div class="dc-name" id="applicant-detail-name">Allyana Rizz Espiridion</div>
+          <div class="dc-sub" id="applicant-detail-sub">BSCS 2-B · Gordon College · Applied April 3, 2025</div>
+          <div class="dc-tags" id="applicant-detail-tags"></div>
+        </div>
+      </div>
+
+      <div class="match-box">
+        <div class="mb-label" id="applicant-detail-match-label">AI match score for Web Dev Assistant</div>
+        <div class="mb-val" id="applicant-detail-match-value">81%</div>
+        <div class="mb-bar-bg"><div class="mb-bar" id="applicant-detail-match-bar" style="width:81%"></div></div>
+        <div class="mb-note" id="applicant-detail-match-note">Strong fit — meets 4 of 5 required skills</div>
+      </div>
+
+      <div class="dc-section">
+        <div class="dc-sec-title">About the applicant</div>
+        <div class="dc-sec-body" id="applicant-detail-about"></div>
+      </div>
+
+      <div class="dc-section">
+        <div class="dc-sec-title">Skill match breakdown</div>
+        <div id="applicant-detail-skills"></div>
+      </div>
+
+      <div class="dc-section">
+        <div class="dc-sec-title">Experience & involvement</div>
+        <div id="applicant-detail-experience"></div>
+      </div>
+    </div>
+
+    <!-- Actions Panel -->
+    <div class="actions-col">
+      <div class="ac-title">Application stage</div>
+      <button class="stage-btn"><div class="stage-dot"></div> New</button>
+      <button class="stage-btn current"><div class="stage-dot"></div> Under review</button>
+      <button class="stage-btn"><div class="stage-dot"></div> For interview</button>
+      <button class="stage-btn"><div class="stage-dot"></div> Hired</button>
+      <button class="stage-btn"><div class="stage-dot"></div> Rejected</button>
+
+      <div class="divider"></div>
+
+      <div class="ac-title">Actions</div>
+      <button class="action-btn-green">Mark as hired ✓</button>
+      <button class="action-btn-outline">Schedule interview</button>
+      <button class="action-btn-outline">Message applicant</button>
+      <button class="action-btn-reject">Reject application</button>
+
+      <div class="divider"></div>
+
+      <div class="ac-title">Internal notes</div>
+      <textarea class="note-area" id="applicant-note-area" placeholder="Add a note about this applicant (only visible to you)...">Strong profile. Has most required skills. Schedule for technical interview.</textarea>
+      <div style="text-align:right;margin-top:0.5rem">
+        <button id="save-applicant-note" style="font-size:0.75rem;background:var(--gc-green);color:#fff;border:none;border-radius:20px;padding:4px 14px;cursor:pointer;font-family:'DM Sans',sans-serif">Save note</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+
+

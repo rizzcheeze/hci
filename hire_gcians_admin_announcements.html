@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Announcements</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-admin" data-page="admin-announcements">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span><div class="admin-badge">Admin panel</div></div>
+    <div class="s-user">
+      <div class="s-avatar">GC</div>
+      <div><div class="s-name">GC Official</div><div class="s-role">Gordon College oversight</div></div>
+    </div>
+    <ul class="s-nav">
+      <li onclick="location.href='/admin'">⬡ Overview</li>
+      <li onclick="location.href='/admin/users'">⬡ Users</li>
+      <li onclick="location.href='/admin/listings'">⬡ All listings</li>
+      <li onclick="location.href='/admin/applications'">⬡ Applications</li>
+      <li onclick="location.href='/admin/ai-logs'">⬡ AI match logs</li>
+      <div class="s-nav-label">Management</div>
+      <li onclick="location.href='/admin/employers'">⬡ Employers</li>
+      <li class="active" onclick="location.href='/admin/announcements'">⬡ Announcements</li>
+      <li onclick="location.href='/admin/reports'">⬡ Reports</li>
+      <div class="s-nav-label">System</div>
+      <li onclick="location.href='/admin/settings'">⬡ Settings</li>
+      <li onclick="location.href='/admin/audit-logs'">⬡ Audit logs</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <div class="main-header">
+      <div>
+        <div class="page-title">Announcements</div>
+        <div class="page-sub">Platform announcements and updates</div>
+      </div>
+    </div>
+    <div class="rp-card"><div class="rp-title">Announcement board</div><div id="admin-announcements-list"></div></div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Skills & Resume</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-student-profile" data-page="skills-resume">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span></div>
+    <div class="s-user">
+      <div class="s-avatar">AE</div>
+      <div><div class="s-name">Allyana Espiridion</div><div class="s-prog">BSCS 2-B</div></div>
+    </div>
+    <ul class="s-nav">
+      <li onclick="location.href='/student/dashboard'">⬡ Dashboard</li>
+      <li onclick="location.href='/student/jobs'">⬡ Browse jobs</li>
+      <li onclick="location.href='/student/applications'">⬡ My applications</li>
+      <li onclick="location.href='/student/saved'">⬡ Saved</li>
+      <div class="s-nav-label">Account</div>
+      <li onclick="location.href='/student/profile'">⬡ Edit profile</li>
+      <li class="active">⬡ Skills &amp; resume</li>
+      <li onclick="location.href='/student/settings'">⬡ Settings</li>
+    </ul>
+  </aside>
+  <main class="main">
+  <div class="main-header">
+    <div>
+      <div class="page-title">Skills &amp; Resume</div>
+      <div class="page-sub">Upload your PDF resume and preview the extracted profile used for compatibility scoring.</div>
+    </div>
+    <div style="display:flex;gap:0.5rem">
+      <button class="btn-outline" onclick="location.href='/student/public-profile'">Public profile</button>
+      <button class="btn-sm" onclick="location.href='/student/applications'">My applications</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div>
+      <div class="card">
+        <div class="card-title">Resume upload</div>
+        <div style="font-size:0.82rem;color:var(--gc-muted);line-height:1.7;margin-bottom:1rem">Upload a PDF resume. Students do not manually enter skills in the profile. The platform uses resume content to support extraction, matching, and profile strength analysis.</div>
+        <input type="file" id="resume-file-input" accept=".pdf" class="form-input" style="margin-bottom:0.75rem">
+        <button class="btn-sm" id="resume-analyze-button">Analyze PDF resume</button>
+        <div id="resume-upload-status" style="font-size:0.78rem;color:var(--gc-muted);margin-top:0.75rem"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Extracted skills</div>
+        <div id="resume-skills-grid" class="skills-grid"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Quantifiable achievements</div>
+        <div id="resume-quant-list"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="card-title">AI summary</div>
+        <div id="resume-summary" style="font-size:0.82rem;color:var(--gc-muted);line-height:1.7"></div>
+      </div>
+      <div class="ai-tip">
+        <div class="ai-tip-label">Recruiter readiness</div>
+        <div class="ai-tip-body" id="resume-recommendation"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Public profile preview</div>
+        <button class="btn-outline" onclick="location.href='/student/public-profile'">Open public profile</button>
+      </div>
+    </div>
+  </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>

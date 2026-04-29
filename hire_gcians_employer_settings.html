@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Employer Settings</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-employer-dashboard" data-page="employer-settings">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span><div class="emp-badge">Employer account</div></div>
+    <div class="s-user">
+      <div class="s-avatar">BD</div>
+      <div><div class="s-name">BrightPath Digital</div><div class="s-dept">Third-party employer</div></div>
+    </div>
+    <ul class="s-nav">
+      <li onclick="location.href='/employer/dashboard'">⬡ Dashboard</li>
+      <li onclick="location.href='/employer/posting'">⬡ Post a job</li>
+      <li onclick="location.href='/employer/applicants'">⬡ Applicants</li>
+      <li onclick="location.href='/employer/listings'">⬡ Active listings</li>
+      <li onclick="location.href='/employer/hired'">⬡ Hired students</li>
+      <div class="s-nav-label">Account</div>
+      <li onclick="location.href='/employer/company'">⬡ Company profile</li>
+      <li class="active">⬡ Settings</li>
+    </ul>
+  </aside>
+  <main class="main">
+    <div class="main-header">
+      <div><div class="page-title">Employer Settings</div><div class="page-sub">Configure your company profile, notifications, and posting defaults.</div></div>
+      <button class="btn-primary" id="employer-settings-save">Save settings</button>
+    </div>
+    <div class="content">
+      <div>
+        <div class="card">
+          <div class="card-title">Company profile settings</div>
+          <label class="form-label">Company display name</label>
+          <input class="form-input" id="employer-setting-name" placeholder="BrightPath Digital Solutions">
+          <label class="form-label">Public summary</label>
+          <textarea class="form-textarea" id="employer-setting-summary" placeholder="Describe your company and the opportunities you offer."></textarea>
+        </div>
+        <div class="card">
+          <div class="card-title">Posting defaults</div>
+          <label class="form-label">Default job type</label>
+          <select class="form-select" id="employer-setting-job-type">
+            <option>Part-time</option>
+            <option>Internship</option>
+            <option>Volunteer</option>
+            <option>Full-time</option>
+          </select>
+          <label class="form-label">Default work setup</label>
+          <select class="form-select" id="employer-setting-work-setup">
+            <option>On-site</option>
+            <option>Remote</option>
+            <option>Flexible</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-title">Notifications</div>
+          <label class="settings-row"><span>Email for new applicants</span><input type="checkbox" id="employer-setting-applicants"></label>
+          <label class="settings-row"><span>Email for expiring listings</span><input type="checkbox" id="employer-setting-expiring"></label>
+          <label class="settings-row"><span>Show company publicly</span><input type="checkbox" id="employer-setting-public"></label>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+

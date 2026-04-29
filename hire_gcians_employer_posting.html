@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Employer Posting</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-employer-posting" data-page="employer-posting">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span><div class="emp-badge">Employer account</div></div>
+    <div class="s-user">
+      <div class="s-avatar">BD</div>
+      <div><div class="s-name">BrightPath Digital</div><div class="s-dept">Third-party employer</div></div>
+    </div>
+    <ul class="s-nav">
+      <li onclick="location.href='/employer/dashboard'">⬡ Dashboard</li>
+      <li class="active">⬡ Post a job</li>
+      <li onclick="location.href='/employer/applicants'">⬡ Applicants</li>
+      <li onclick="location.href='/employer/listings'">⬡ Active listings</li>
+      <li onclick="location.href='/employer/hired'">⬡ Hired students</li>
+      <div class="s-nav-label">Account</div>
+      <li onclick="location.href='/employer/company'">⬡ Company profile</li>
+      <li onclick="location.href='/employer/settings'">⬡ Settings</li>
+    </ul>
+  </aside>
+  <main class="main">
+    <div class="main-header">
+      <div>
+        <div class="page-title">Post a new opportunity</div>
+        <div class="page-sub">Fill in the details below and the matching engine will rank likely student fits.</div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div>
+        <div class="form-card">
+          <div class="form-section">
+            <label class="form-label">Job title <span>(required)</span></label>
+            <input class="form-input" id="posting-title" placeholder="Web Development Assistant" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-section" style="margin-bottom:0">
+              <label class="form-label">Company / Employer</label>
+              <select class="form-select" id="posting-company">
+                <option selected>BrightPath Digital Solutions</option>
+                <option>North Harbor Creatives</option>
+                <option>Summit Workforce Partners</option>
+                <option>Nova Analytics</option>
+                <option>Independent Employer</option>
+              </select>
+            </div>
+            <div class="form-section" style="margin-bottom:0">
+              <label class="form-label">Job type</label>
+              <select class="form-select" id="posting-job-type">
+                <option selected>Part-time</option>
+                <option>Internship</option>
+                <option>Volunteer</option>
+                <option>Full-time</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="form-row">
+            <div class="form-section" style="margin-bottom:0">
+              <label class="form-label">Work setup</label>
+              <select class="form-select" id="posting-work-setup">
+                <option>On-site</option>
+                <option>Remote</option>
+                <option selected>Flexible</option>
+              </select>
+            </div>
+            <div class="form-section" style="margin-bottom:0">
+              <label class="form-label">Schedule</label>
+              <input class="form-input" id="posting-schedule" placeholder="Mon-Fri, flexible hours" />
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="form-section">
+            <label class="form-label">Job description</label>
+            <textarea class="form-textarea" id="posting-description" placeholder="Describe the role, responsibilities, and who should apply."></textarea>
+          </div>
+
+          <div class="form-section">
+            <label class="form-label">Required skills <span>(used for AI matching)</span></label>
+            <div class="skill-input-wrap">
+              <div id="posting-skill-chips"></div>
+              <input class="skill-input-ghost" id="posting-skill-input" placeholder="+ Add skill" />
+            </div>
+          </div>
+
+          <div class="form-section" style="margin-bottom:0">
+            <label class="form-label">Number of slots</label>
+            <input class="form-input" id="posting-slots" value="1" style="width:100px" />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="preview-card">
+          <div class="preview-label">Live preview</div>
+          <div class="preview-title" id="posting-preview-title">New job draft</div>
+          <div class="preview-dept" id="posting-preview-dept">BrightPath Digital Solutions · Posted just now</div>
+          <div class="preview-tags" id="posting-preview-tags"></div>
+          <div class="preview-desc" id="posting-preview-desc">Your role description preview will appear here.</div>
+
+          <div class="ai-preview-box">
+            <div class="ai-preview-label">AI match estimate</div>
+            <div class="ai-preview-body" id="posting-match-estimate">Based on your listed skills, approximately <strong style="color:var(--gc-green)">14 students</strong> on the platform have a match score above 70% for this role.</div>
+          </div>
+
+          <div class="applicants-preview">
+            <div class="ap-label">Top predicted matches</div>
+            <div id="posting-predicted-matches"></div>
+          </div>
+
+          <button class="submit-btn">Publish this listing</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+
+

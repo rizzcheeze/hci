@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Company Profile</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-employer-dashboard" data-page="company-profile">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span><div class="emp-badge">Employer account</div></div>
+    <div class="s-user">
+      <div class="s-avatar">BD</div>
+      <div><div class="s-name">BrightPath Digital</div><div class="s-dept">Third-party employer</div></div>
+    </div>
+    <ul class="s-nav">
+      <li onclick="location.href='/employer/dashboard'">⬡ Dashboard</li>
+      <li onclick="location.href='/employer/posting'">⬡ Post a job</li>
+      <li onclick="location.href='/employer/applicants'">⬡ Applicants</li>
+      <li onclick="location.href='/employer/listings'">⬡ Active listings</li>
+      <li onclick="location.href='/employer/hired'">⬡ Hired students</li>
+      <div class="s-nav-label">Account</div>
+      <li class="active">⬡ Company profile</li>
+      <li onclick="location.href='/employer/settings'">⬡ Settings</li>
+    </ul>
+  </aside>
+  <main class="main">
+    <div class="main-header">
+      <div><div class="page-title">Company profile</div><div class="page-sub">How your organization appears to Gordon College students.</div></div>
+    </div>
+    <div class="content">
+      <div>
+        <div class="card">
+          <div class="card-title">Company overview</div>
+          <div id="company-profile-summary" style="font-size:0.82rem;color:var(--gc-muted);line-height:1.7"></div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-title">Current openings snapshot</div>
+          <div id="company-profile-jobs"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+

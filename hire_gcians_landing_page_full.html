@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hire GCians! — Landing Page</title>
+    <link rel="stylesheet" href="/hire_gcians.css">
+</head>
+
+<body class="hg-landing" data-page="landing">
+    <nav class="nav">
+        <div class="logo" onclick="location.href='/'" style="cursor:pointer">Hire <span>GCians!</span></div>
+        <div class="nav-links">
+            <a href="/jobs">Browse Jobs</a>
+            <a href="/for-employers">For Employers</a>
+            <a href="/about">About</a>
+            <a href="/routes">All Pages</a>
+            <button class="btn-outline" onclick="location.href='/auth'">Log in</button>
+            <button class="btn-primary" onclick="location.href='/auth'">Sign up free</button>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div>
+            <div class="hero-tag">Career platform for Gordon College students</div>
+            <h1>Your campus career, <em>intelligently</em> matched.</h1>
+            <p>Hire GCians! connects Gordon College students with third-party employers and campus-facing opportunities using resume-derived matching and structured hiring workflows.</p>
+            <div class="hero-btns">
+                <button class="btn-primary" onclick="location.href='/jobs'">Find opportunities</button>
+                <button class="btn-outline" data-role-action="employer-only" onclick="location.href='/employer/posting'">Post a job</button>
+            </div>
+        </div>
+        <div class="hero-visual" id="landing-match-cards">
+            <div class="ai-badge">
+                <div class="ai-dot"></div> Matching preview
+            </div>
+            <div class="match-card">
+                <div class="match-header">
+                    <div class="match-title">UI/UX Design Intern</div>
+                    <div class="match-pct">94% match</div>
+                </div>
+                <div class="match-sub">BrightPath Digital Solutions · Internship</div>
+                <div class="match-bar-bg">
+                    <div class="match-bar" style="width:94%"></div>
+                </div>
+                <div class="match-tags"><span class="tag">Figma</span><span class="tag">Adobe XD</span><span
+                        class="tag">Prototyping</span></div>
+            </div>
+            <div class="match-card" style="background:#fff;border:0.5px solid #C0DD97">
+                <div class="match-header">
+                    <div class="match-title">Web Dev Assistant</div>
+                    <div class="match-pct" style="background:#639922">81% match</div>
+                </div>
+                <div class="match-sub">BrightPath Digital Solutions · Part-time</div>
+                <div class="match-bar-bg">
+                    <div class="match-bar" style="width:81%;background:#639922"></div>
+                </div>
+                <div class="match-tags"><span class="tag">Vue.js</span><span class="tag">HTML/CSS</span></div>
+            </div>
+            <div class="match-card" style="background:#fff;border:0.5px solid #C0DD97">
+                <div class="match-header">
+                <div class="match-title">Graphic Design Assistant</div>
+                    <div class="match-pct" style="background:#97C459;color:#27500A">73% match</div>
+                </div>
+                <div class="match-sub">North Harbor Creatives · Part-time</div>
+                <div class="match-bar-bg">
+                    <div class="match-bar" style="width:73%;background:#97C459"></div>
+                </div>
+                <div class="match-tags"><span class="tag">Canva</span><span class="tag">Layout</span></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="stats-row" id="landing-stats"></div>
+
+    <div class="how-section">
+        <div class="section-label">How it works</div>
+        <div class="section-title">Three steps to your next opportunity</div>
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <div class="step-title">Build your profile</div>
+                <div class="step-desc">Create a student profile and upload a PDF resume to drive profile strength and opportunity matching.</div>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <div class="step-title">Get matched</div>
+                <div class="step-desc">The app ranks openings using resume-derived skills and surfaces the strongest opportunities first.</div>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <div class="step-title">Apply in one click</div>
+                <div class="step-desc">Apply through the hiring workflow and track status changes across your applications.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">Hire GCians! · Gordon College career platform</div>
+    <script src="/hire_gcians.js"></script>
+</body>
+
+</html>
+

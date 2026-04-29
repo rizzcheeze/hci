@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Public Profile</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-student-profile" data-page="public-profile">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span></div>
+    <div class="s-user">
+      <div class="s-avatar">AE</div>
+      <div><div class="s-name">Allyana Espiridion</div><div class="s-prog">BSCS 2-B</div></div>
+    </div>
+    <ul class="s-nav">
+      <li onclick="location.href='/student/dashboard'">⬡ Dashboard</li>
+      <li onclick="location.href='/student/jobs'">⬡ Browse jobs</li>
+      <li onclick="location.href='/student/applications'">⬡ My applications</li>
+      <li onclick="location.href='/student/saved'">⬡ Saved</li>
+      <div class="s-nav-label">Account</div>
+      <li onclick="location.href='/student/profile'">⬡ Edit profile</li>
+      <li onclick="location.href='/student/resume'">⬡ Skills &amp; resume</li>
+      <li onclick="location.href='/student/settings'">⬡ Settings</li>
+    </ul>
+  </aside>
+  <main class="main">
+  <div class="main-header">
+    <div>
+      <div class="page-title">Public Profile</div>
+      <div class="page-sub">Preview how employers see your profile.</div>
+    </div>
+    <div style="display:flex;gap:0.5rem">
+      <button class="btn-outline" onclick="location.href='/student/profile'">Edit profile</button>
+      <button class="btn-sm" onclick="location.href='/student/jobs'">Browse jobs</button>
+    </div>
+  </div>
+  <div class="profile-hero">
+    <div class="ph-inner">
+      <div class="avatar-big">AE</div>
+      <div class="ph-info">
+        <h2 id="public-profile-name">Public profile</h2>
+        <p id="public-profile-subtitle"></p>
+        <div class="ph-tags" id="public-profile-tags"></div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div>
+      <div class="card">
+        <div class="card-title">About</div>
+        <div id="public-profile-about" style="font-size:0.82rem;color:var(--gc-muted);line-height:1.7"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Skills</div>
+        <div id="public-profile-skills" class="skills-grid"></div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div class="card-title">Experience</div>
+        <div id="public-profile-experience"></div>
+      </div>
+    </div>
+  </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Platform Overview</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-admin" data-page="admin">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span><div class="admin-badge">Admin panel</div></div>
+    <div class="s-user">
+      <div class="s-avatar">GC</div>
+      <div><div class="s-name">GC Official</div><div class="s-role">Gordon College oversight</div></div>
+    </div>
+    <ul class="s-nav">
+      <li class="active" onclick="location.href='/admin'">⬡ Overview</li>
+      <li onclick="location.href='/admin/users'">⬡ Users</li>
+      <li onclick="location.href='/admin/listings'">⬡ All listings</li>
+      <li onclick="location.href='/admin/applications'">⬡ Applications</li>
+      <li onclick="location.href='/admin/ai-logs'">⬡ AI match logs</li>
+      <div class="s-nav-label">Management</div>
+      <li onclick="location.href='/admin/employers'">⬡ Employers</li>
+      <li onclick="location.href='/admin/announcements'">⬡ Announcements</li>
+      <li onclick="location.href='/admin/reports'">⬡ Reports</li>
+      <div class="s-nav-label">System</div>
+      <li onclick="location.href='/admin/settings'">⬡ Settings</li>
+      <li onclick="location.href='/admin/audit-logs'">⬡ Audit logs</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <div class="main-header">
+      <div>
+        <div class="page-title">Platform Overview</div>
+        <div class="page-sub">Gordon College official oversight for Hire GCians!</div>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="metric-val">342</div><div class="metric-label">Registered students</div><div class="metric-change">+12 this week</div></div>
+      <div class="metric"><div class="metric-val">120</div><div class="metric-label">Active job listings</div><div class="metric-change">+8 this week</div></div>
+      <div class="metric"><div class="metric-val">1,204</div><div class="metric-label">Total applications</div><div class="metric-change">+47 this week</div></div>
+      <div class="metric"><div class="metric-val">88%</div><div class="metric-label">Avg. AI match score</div><div class="metric-change">↑ 2% vs last month</div></div>
+    </div>
+    <div class="layout">
+      <div>
+        <div class="panel">
+          <div class="panel-head"><div class="panel-title">Recent users</div><div class="panel-action"><a href="/admin/users">Open tab →</a></div></div>
+          <div class="t-head users-grid"><div>User</div><div>Role</div><div>Program</div><div>Joined</div><div>Status</div></div>
+          <div id="admin-users-table"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div class="panel-title">Active employer listings</div><div class="panel-action"><a href="/admin/listings">Open tab →</a></div></div>
+          <div class="t-head jobs-grid"><div>Position</div><div>Employer</div><div>Applicants</div><div>Match avg.</div><div>Status</div></div>
+          <div id="admin-jobs-table"></div>
+        </div>
+      </div>
+      <div>
+        <div class="rp-card stage-card">
+          <div class="rp-title">Quick navigation</div>
+          <div class="panel-row">Use the sidebar tabs to drill into users, listings, applications, and AI logs.</div>
+          <div class="panel-row">The employer tab shows all active third-party accounts and their participation.</div>
+          <div class="panel-row">Reports and audit logs are available under System in the sidebar.</div>
+        </div>
+        <div class="rp-card"><div class="rp-title">Platform health</div><div id="admin-health-card"></div></div>
+        <div class="rp-card"><div class="rp-title">System alerts</div><div id="admin-alerts-card"></div></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hire GCians! — For Employers</title>
+    <link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-landing" data-page="for-employers">
+    <nav class="nav">
+        <div class="logo" onclick="location.href='/'" style="cursor:pointer">Hire <span>GCians!</span></div>
+        <div class="nav-links">
+            <a href="/jobs">Browse Jobs</a>
+            <a href="/for-employers" aria-current="page">For Employers</a>
+            <a href="/about">About</a>
+            <a href="/routes">All Pages</a>
+            <button class="btn-outline" onclick="location.href='/auth'">Log in</button>
+            <button class="btn-primary" onclick="location.href='/auth'">Sign up free</button>
+        </div>
+    </nav>
+
+    <div class="hero hero-compact">
+        <div>
+            <div class="hero-tag">For third-party employers</div>
+            <h1>Post roles that reach the <em>right</em> students faster.</h1>
+            <p>Hire GCians! helps outside companies publish openings, review applicants, and surface Gordon College students whose resume-derived skills align with the work.</p>
+            <div class="hero-btns">
+                <button class="btn-primary" onclick="location.href='/auth'">Create employer account</button>
+            <button class="btn-outline" onclick="location.href='/employer/dashboard'">Open employer workspace</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="ai-badge">
+                <div class="ai-dot"></div> Employer tools active
+            </div>
+            <div id="employer-featured-jobs"></div>
+        </div>
+    </div>
+
+
+    <div class="stats-row" id="employer-live-stats"></div>
+
+    <section class="how-section">
+        <div class="section-label">Employer workflow</div>
+        <div class="section-title">Built for companies recruiting Gordon College students</div>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-title">Post and manage openings</div>
+                <div class="info-desc">Create internships, part-time jobs, and entry-level roles with schedules, slots, and skill requirements.</div>
+            </div>
+            <div class="info-card">
+                <div class="info-title">Review ranked applicants</div>
+                <div class="info-desc">See applicants in one place with match signals, stage tracking, notes, and recent activity.</div>
+            </div>
+            <div class="info-card">
+                <div class="info-title">Support resume analysis</div>
+                <div class="info-desc">The product direction includes AI-assisted PDF resume scanning to identify declared skills and whether achievements are quantifiable.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-section">
+        <div class="section-label">Why employers use it</div>
+        <div class="section-title">A cleaner path from posting to shortlist</div>
+        <div class="split-panel">
+            <div class="panel-card">
+                <div class="panel-title">What employers can do now</div>
+                <div class="panel-list">
+                    <div class="panel-row">Publish jobs from the employer posting flow</div>
+                    <div class="panel-row">Track applicants and move them through stages</div>
+                    <div class="panel-row">Review hired students and active listings</div>
+                    <div class="panel-row">Manage company profile and settings</div>
+                </div>
+            </div>
+            <div class="panel-card">
+                <div class="panel-title">Coming to the platform</div>
+                <div class="panel-list">
+                    <div class="panel-row">Real-time backend for jobs and applications</div>
+                    <div class="panel-row">Verified employer authentication and approvals</div>
+                    <div class="panel-row">AI-powered PDF skill classification</div>
+                    <div class="panel-row">Audit-ready applicant history and exports</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">Gordon College students · Third-party employer hiring workflow</div>
+    <script src="/hire_gcians.js"></script>
+</body>
+</html>

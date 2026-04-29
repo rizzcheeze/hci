@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Employer Dashboard</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-employer-dashboard" data-page="employer-dashboard">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span><div class="emp-badge">Employer account</div></div>
+    <div class="s-user">
+      <div class="s-avatar">BD</div>
+      <div><div class="s-name">BrightPath Digital</div><div class="s-dept">Third-party employer</div></div>
+    </div>
+    <ul class="s-nav">
+      <li class="active">⬡ Dashboard</li>
+      <li onclick="location.href='/employer/posting'">⬡ Post a job</li>
+      <li onclick="location.href='/employer/applicants'">⬡ Applicants <span class="badge">5</span></li>
+      <li onclick="location.href='/employer/listings'">⬡ Active listings</li>
+      <li onclick="location.href='/employer/hired'">⬡ Hired students</li>
+      <div class="s-nav-label">Account</div>
+      <li onclick="location.href='/employer/company'">⬡ Company profile</li>
+      <li onclick="location.href='/employer/settings'">⬡ Settings</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <div class="main-header">
+      <div>
+        <div class="page-title">Employer Dashboard</div>
+        <div class="page-sub">BrightPath Digital Solutions · Hiring Gordon College students</div>
+      </div>
+      <button class="btn-primary" onclick="location.href='/employer/posting'">+ Post a new job</button>
+    </div>
+
+    <div class="metrics" id="employer-dashboard-metrics"></div>
+
+    <div class="layout">
+      <div>
+        <div class="section-head">Your active job listings <span class="see-all">Manage all →</span></div>
+        <div class="job-table" id="employer-job-table">
+          <div class="jt-head">
+            <div>Position</div>
+            <div>Status</div>
+            <div>Applicants</div>
+            <div>Slots</div>
+            <div>Actions</div>
+          </div>
+          <div class="jt-row">
+            <div>
+              <div class="jt-title">Web Dev Assistant</div>
+              <div class="jt-dept">Posted April 2, 2025</div>
+            </div>
+            <div class="jt-status"><span class="status-dot"></span>Active</div>
+            <div class="jt-num">8 <span class="jt-new">+3 new</span></div>
+            <div class="jt-num">2</div>
+            <div class="jt-actions"><button class="jt-btn" onclick="location.href='/employer/applicants'">View</button><button class="jt-btn">Edit</button></div>
+          </div>
+          <div class="jt-row">
+            <div>
+              <div class="jt-title">IT Support Intern</div>
+              <div class="jt-dept">Posted March 28, 2025</div>
+            </div>
+            <div class="jt-status"><span class="status-dot"></span>Active</div>
+            <div class="jt-num">4 <span class="jt-new">+1 new</span></div>
+            <div class="jt-num">1</div>
+            <div class="jt-actions"><button class="jt-btn" onclick="location.href='/employer/applicants'">View</button><button class="jt-btn">Edit</button></div>
+          </div>
+          <div class="jt-row">
+            <div>
+              <div class="jt-title">Database Admin Assistant</div>
+              <div class="jt-dept">Posted March 20, 2025</div>
+            </div>
+            <div class="jt-status"><span class="status-dot"></span>Active</div>
+            <div class="jt-num">2</div>
+            <div class="jt-num">2</div>
+            <div class="jt-actions"><button class="jt-btn" onclick="location.href='/employer/applicants'">View</button><button class="jt-btn">Edit</button></div>
+          </div>
+          <div class="jt-row">
+            <div>
+              <div class="jt-title">Network Technician Volunteer</div>
+              <div class="jt-dept">Posted March 10, 2025 · Ended</div>
+            </div>
+            <div class="jt-status"><span class="status-dot closed"></span>Closed</div>
+            <div class="jt-num">12</div>
+            <div class="jt-num">3</div>
+            <div class="jt-actions"><button class="jt-btn">Archive</button><button class="jt-btn">Repost</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-head">Recent applicants</div>
+        <div class="panel-card" id="recent-applicants-panel">
+          <div style="text-align:center;margin-top:0.75rem">
+            <button style="font-size:0.75rem;color:var(--gc-green);background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif" onclick="location.href='/employer/applicants'">View all applicants →</button>
+          </div>
+        </div>
+
+        <div class="section-head">Recent activity</div>
+        <div class="panel-card" id="recent-activity-panel"></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+

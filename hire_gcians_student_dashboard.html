@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hire GCians! — Student Dashboard</title>
+  <link rel="stylesheet" href="/hire_gcians.css">
+</head>
+
+<body class="hg-student-dashboard" data-page="student-dashboard">
+  <div class="dash">
+    <aside class="sidebar">
+      <div class="s-logo">Hire <span>GCians!</span></div>
+      <div class="s-user">
+        <div class="s-avatar">AE</div>
+        <div>
+          <div class="s-name">Allyana Espiridion</div>
+          <div class="s-prog">BSCS 2-B</div>
+        </div>
+      </div>
+      <ul class="s-nav">
+        <li class="active">⬡ Dashboard</li>
+        <li onclick="location.href='/student/jobs'">⬡ Browse jobs</li>
+        <li onclick="location.href='/student/applications'">⬡ My applications</li>
+        <li onclick="location.href='/student/saved'">⬡ Saved</li>
+        <div class="s-nav-label">Account</div>
+        <li onclick="location.href='/student/profile'">⬡ Edit profile</li>
+        <li onclick="location.href='/student/resume'">⬡ Skills &amp; resume</li>
+        <li onclick="location.href='/student/settings'">⬡ Settings</li>
+      </ul>
+    </aside>
+    <main class="main">
+      <div class="main-header">
+        <div>
+          <div class="main-title" id="student-dashboard-title">Welcome back, Allyana</div>
+          <div class="main-sub" id="student-dashboard-subtitle">3 new matches since your last visit</div>
+        </div>
+        <button class="btn-sm" onclick="location.href='/student/profile'">Update profile</button>
+      </div>
+
+      <div class="metrics" id="student-dashboard-metrics">
+        <div class="metric">
+          <div class="metric-val">8</div>
+          <div class="metric-label">Recommended jobs</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">3</div>
+          <div class="metric-label">Applications sent</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">94%</div>
+          <div class="metric-label">Top match score</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 280px;gap:1rem">
+        <div>
+          <div class="section-head">Recommended for you <span class="see-all"
+              onclick="location.href='/student/jobs'">See all →</span></div>
+          <div id="student-dashboard-recommendations"></div>
+        </div>
+
+        <div>
+          <div class="section-head">Your profile</div>
+          <div class="profile-card">
+            <div class="profile-label">Skills on file</div>
+            <div class="skills-wrap" id="student-dashboard-skills"></div>
+          </div>
+          <div class="profile-card">
+            <div class="profile-label">Profile completeness</div>
+            <div class="prog-bar-bg">
+              <div class="prog-bar" id="student-dashboard-completeness-bar" style="width:75%"></div>
+            </div>
+            <div class="prog-label"><span id="student-dashboard-completeness-text">75% complete</span><span>Add resume
+                →</span></div>
+          </div>
+          <div class="profile-card" style="background:var(--gc-green-light);border-color:#97C459">
+            <div style="font-size:0.78rem;color:var(--gc-green);font-weight:500;margin-bottom:0.35rem">Tip from the AI
+              engine</div>
+            <div style="font-size:0.75rem;color:var(--gc-muted);line-height:1.6" id="student-dashboard-tip"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/hire_gcians.js"></script>
+</body>
+
+</html>

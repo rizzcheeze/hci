@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hire GCians! — Student Profile</title>
+<link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-student-profile" data-page="student-profile">
+<div class="dash">
+  <aside class="sidebar">
+    <div class="s-logo">Hire <span>GCians!</span></div>
+    <div class="s-user">
+      <div class="s-avatar">AE</div>
+      <div><div class="s-name">Allyana Espiridion</div><div class="s-prog">BSCS 2-B</div></div>
+    </div>
+    <ul class="s-nav">
+      <li onclick="location.href='/student/dashboard'">⬡ Dashboard</li>
+      <li onclick="location.href='/student/jobs'">⬡ Browse jobs</li>
+      <li onclick="location.href='/student/applications'">⬡ My applications</li>
+      <li onclick="location.href='/student/saved'">⬡ Saved</li>
+      <div class="s-nav-label">Account</div>
+      <li class="active">⬡ Edit profile</li>
+      <li onclick="location.href='/student/resume'">⬡ Skills &amp; resume</li>
+      <li onclick="location.href='/student/settings'">⬡ Settings</li>
+    </ul>
+  </aside>
+  <main class="main">
+  <div class="main-header">
+    <div>
+      <div class="page-title">Edit Profile</div>
+      <div class="page-sub">Your skills are generated from your uploaded PDF resume and used for job matching.</div>
+    </div>
+    <div style="display:flex;gap:0.5rem">
+      <button class="btn-outline" onclick="location.href='/student/resume'">Open resume analysis</button>
+      <button class="btn-sm" id="profile-save-button">Save changes</button>
+    </div>
+  </div>
+
+  <div class="profile-hero">
+    <div class="ph-inner">
+      <div class="avatar-big">AE</div>
+      <div class="ph-info">
+        <h2 id="profile-name">Allyana Rizz Espiridion</h2>
+        <p id="profile-program-line">BSCS 2-B · Gordon College, Olongapo City</p>
+        <div class="ph-tags" id="profile-tags"></div>
+      </div>
+      <div class="ph-actions">
+        <button class="btn-outline" style="font-size:0.72rem">&#128247; Upload photo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div>
+      <div class="card">
+        <div class="card-title">AI-extracted skills <span class="edit-link">From resume PDF</span></div>
+        <div class="skills-grid" id="profile-skills"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Experience &amp; involvement <span class="edit-link">+ Add</span></div>
+        <div id="profile-experience"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">About me <span class="edit-link">Edit</span></div>
+        <div style="font-size:0.82rem;color:var(--gc-muted);line-height:1.7" id="profile-about"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="card-title">Profile completeness</div>
+        <div class="comp-ring">
+          <div class="comp-num" id="profile-completeness-number">75%</div>
+          <div class="comp-sub">Almost there!</div>
+        </div>
+        <div class="comp-bar-bg"><div class="comp-bar" id="profile-completeness-bar"></div></div>
+        <div class="checklist-row"><span class="check-done">✓</span> Basic info added</div>
+        <div class="checklist-row"><span class="check-done">✓</span> Skills extracted from resume</div>
+        <div class="checklist-row"><span class="check-done">✓</span> Experience added</div>
+        <div class="checklist-row" id="profile-resume-check"><span class="check-todo">○</span> Resume uploaded</div>
+        <div class="checklist-row"><span class="check-todo">○</span> Profile photo added</div>
+      </div>
+
+      <div class="ai-tip">
+        <div class="ai-tip-label">AI engine suggests</div>
+        <div class="ai-tip-body" id="profile-ai-tip"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Skill match strength</div>
+        <div class="strength-row"><span class="strength-label">UI/UX</span><div class="strength-bar-bg"><div class="strength-bar" style="width:95%"></div></div><span class="strength-pct">95%</span></div>
+        <div class="strength-row"><span class="strength-label">Frontend</span><div class="strength-bar-bg"><div class="strength-bar" style="width:82%"></div></div><span class="strength-pct">82%</span></div>
+        <div class="strength-row"><span class="strength-label">Graphic Design</span><div class="strength-bar-bg"><div class="strength-bar" style="width:74%"></div></div><span class="strength-pct">74%</span></div>
+        <div class="strength-row"><span class="strength-label">Content</span><div class="strength-bar-bg"><div class="strength-bar" style="width:60%"></div></div><span class="strength-pct">60%</span></div>
+      </div>
+    </div>
+  </div>
+  </main>
+</div>
+<script src="/hire_gcians.js"></script>
+</body>
+</html>
+

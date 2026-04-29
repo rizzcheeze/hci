@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hire GCians! — About</title>
+    <link rel="stylesheet" href="/hire_gcians.css">
+</head>
+<body class="hg-landing" data-page="about">
+    <nav class="nav">
+        <div class="logo" onclick="location.href='/'" style="cursor:pointer">Hire <span>GCians!</span></div>
+        <div class="nav-links">
+            <a href="/jobs">Browse Jobs</a>
+            <a href="/for-employers">For Employers</a>
+            <a href="/about" aria-current="page">About</a>
+            <a href="/routes">All Pages</a>
+            <button class="btn-outline" onclick="location.href='/auth'">Log in</button>
+            <button class="btn-primary" onclick="location.href='/auth'">Sign up free</button>
+        </div>
+    </nav>
+
+    <div class="hero hero-compact">
+        <div>
+            <div class="hero-tag">About the platform</div>
+            <h1>A campus hiring app built around <em>fit</em>, not just forms.</h1>
+            <p>Hire GCians! is designed to connect Gordon College students with third-party employers using structured profiles, job requirements, and AI-assisted resume analysis.</p>
+            <div class="hero-btns">
+                <button class="btn-primary" onclick="location.href='/jobs'">Browse current jobs</button>
+                <button class="btn-outline" onclick="location.href='/auth'">Create an account</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="ai-badge">
+                <div class="ai-dot"></div> Product overview
+            </div>
+            <div class="panel-list" id="about-feature-list"></div>
+        </div>
+    </div>
+
+
+    <div class="stats-row" id="about-platform-stats"></div>
+
+    <section class="how-section">
+        <div class="section-label">Core ideas</div>
+        <div class="section-title">What the platform is trying to solve</div>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-title">Better student matching</div>
+                <div class="info-desc">Students should see openings ranked by skill fit instead of manually checking every posting.</div>
+            </div>
+            <div class="info-card">
+                <div class="info-title">Cleaner employer review</div>
+                <div class="info-desc">Third-party employers need one place to publish roles, screen applicants, and move strong candidates forward.</div>
+            </div>
+            <div class="info-card">
+                <div class="info-title">Resume intelligence</div>
+                <div class="info-desc">The planned AI pipeline should scan PDF resumes, identify skills, and detect whether achievements are measurable or quantifiable.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-section">
+        <div class="section-label">Platform capabilities</div>
+        <div class="section-title">What the platform supports</div>
+        <div class="split-panel">
+            <div class="panel-card">
+                <div class="panel-title">Student side</div>
+                <div class="panel-list">
+                    <div class="panel-row">Browse jobs, save listings, and apply</div>
+                    <div class="panel-row">Edit profile and view applications</div>
+                    <div class="panel-row">Use the resume-analysis flow</div>
+                </div>
+            </div>
+            <div class="panel-card">
+                <div class="panel-title">Employer side</div>
+                <div class="panel-list">
+                    <div class="panel-row">Post and preview jobs</div>
+                    <div class="panel-row">Review applicants and stages</div>
+                    <div class="panel-row">Manage listings, company profile, and settings</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">Hire GCians! · Resume-driven career platform</div>
+    <script src="/hire_gcians.js"></script>
+</body>
+</html>
